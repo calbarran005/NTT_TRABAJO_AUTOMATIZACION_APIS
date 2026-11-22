@@ -1,4 +1,4 @@
-## TRABAJO AUTOMATIZACION APIS
+## ALBARRÁN JARA CARLOS FERNANDO - (TRABAJO AUTOMATIZACION APIS) 
 
 Proyecto de automatizacion de pruebas para la API de productos.
 Usando Cucumber y  el patron Screenplay.
