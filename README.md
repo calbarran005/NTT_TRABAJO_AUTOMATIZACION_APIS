@@ -56,27 +56,11 @@ Al terminar, podremos encontrar el reporte en la carpeta: `target/site/serenity/
 
 Los Escenarios negativos tienen el tag `@Negativo`.
 
+## TENER EN CUENTA
+
+Para el PATCH, PUT, DELETE y consulta por id la primera ejecucion de todos los test dará con normalidad, luego puede marcar error al eliminar, ya que se eliminó el producto con el id que estaba y se necesite modificar
+en producto ya que esta por defecto un id que se reestablece cada 30 min de inacctividad "cccccccc-cccc-cccc-cccc-cccccccccccc" , en caso marque error consultar los productos existentes y poner el id de un producto existente
+
 Para el PATCH, PUT, DELETE y consulta por id, el id del `.feature` tiene que ser de un ID del producto que exista. Si no, hay que crear uno y cambiar el id 
 O consultar en la pag web con un ID ya existente y probrar los diferentes casos.
 
-## Organización de los Archivos:
-
-```
-src/main/java/org/example
-  Models      -> Product (los datos del producto)
-  Taks        -> lo que hace el actor: crear, listar, consultar, actualizar, eliminar
-  Questions   -> lo que se le pregunta a la respuesta (codigo, campos, body)
-  Utils       -> Endpoints (la URL base)
-
-src/test/java/org/example
-  StepDefinitions  -> los pasos del feature (Given, When, Then)
-  ProductRunnerTest -> el runner
-
-src/test/resources/features
-  Product.feature  -> los escenarios
-```
-
-
-- **Tasks** hacen la peticion a la API.
-- **Questions** leen la respuesta.
-- En los **Then** se compara lo que respondio la API con lo que esperaba.
